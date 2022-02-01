@@ -11,13 +11,13 @@
 <body>
   <!-- Header with doble linear gradient -->
   <header class="header">
-    <div class="header__container">
+    <!-- Background in z-index: -1 -->
+    <picture class="header__bg-img">
+      <source media="(min-width: 375px)" srcset="imgs/fao-schwarz-2@2x.png">
+      <img src="imgs/fao-schwarz-2.png" alt="Fao Shawarz">
+    </picture>
 
-      <!-- Background in z-index: -1 -->
-      <picture class="header__bg-img">
-        <source media="(min-width: 375px)" srcset="imgs/fao-schwarz-2@2x.png">
-        <img src="imgs/fao-schwarz-2.png" alt="Fao Shawarz">
-      </picture>
+    <div class="header__container">
 
       <div class="header__main-content">
         <h3 class="header__upper-title">Sviluppami con fedeltà</h3>
@@ -28,8 +28,8 @@
       <div class="header__bottom-content">
         <a class="header__link-video" href="#">
           <!-- play button made in css -->
-          <span class="play-icon"></span>
-          <span class="link">Fake link a video</span>
+          <img class="play-icon" src="imgs/play-icon.svg" alt="play button">
+          <span>Fake link a video</span>
         </a>
         <img class="header__icon" src="imgs/mongolfiera-2.svg" alt="mongolfiera">
       </div>

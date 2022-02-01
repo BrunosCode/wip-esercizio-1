@@ -1,4 +1,5 @@
 @import "scss/variables";
+@import "scss/fonts";
 @import "scss/mixins";
 @import "scss/header";
 
@@ -8,4 +9,15 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Futura500";
+}
+
+.play-icon {
+  stroke: $white;
+  stroke-width: 2px;
+  height: 1rem;
+  margin-right: .25rem;
 }

@@ -1,7 +1,7 @@
 @import "scss/variables";
 @import "scss/fonts";
 @import "scss/mixins";
-@import "scss/header";
+
 
 *,
 *::before, 
@@ -13,6 +13,13 @@
 
 body {
   font-family: "Futura500";
+  color: black;
+}
+
+
+.container {
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .play-icon {
@@ -21,3 +28,7 @@ body {
   height: 1rem;
   margin-right: .25rem;
 }
+
+@import "scss/header";
+@import "scss/filters";
+@import "scss/cards";

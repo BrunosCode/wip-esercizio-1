@@ -3,9 +3,9 @@
   color: white;
   text-align: center;
   height: 770px;
-  background: 
-    linear-gradient(180deg, rgba($blue, .72), rgba($white, 0)) 100% 100% no-repeat,
-    linear-gradient(180deg, rgba($blue, .72), rgba($white, 0)) 100% -240px no-repeat;
+  background: linear-gradient(180deg, rgba($blue, 1), rgba(black, 0)) 100% 100% no-repeat;
+    // linear-gradient(180deg, rgba($blue, 1), rgba($white, 0)) 100% 100% no-repeat,
+    // linear-gradient(180deg, rgba($blue, .72), rgba($white, 0)) 100% -240px no-repeat;
 
   &__bg-img {
     z-index: -1;
@@ -28,73 +28,60 @@
     margin: 0 auto;
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   &__main-content {
-    max-width: 686px;
-    margin: 0 auto;
+    align-self: center;
+    flex-grow: 1;
   }
   &__upper-title {
     text-transform: uppercase;
     font-size: 15px;
     line-height: 20px;
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin-bottom: .6rem;
     font-family: "Futura700";
   }
   &__title {
     font-size: 40px;
     letter-spacing: 2px;
     line-height: 45px;
-    margin-bottom: 1.5rem;
-    font-family: "Boldoni72";
+    margin-bottom: 2.875rem;
+    font-family: "Bodoni72";
+    font-weight: 500;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__cta {
     padding: 1rem 1.5rem;
     background: $gold--1;
     text-transform: uppercase;
+    font-family: "Futura700";
   }
 
-
-  &__bottom-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
   &__link-video {
     color: inherit;
     font-size: 15px;
     margin-bottom: 1rem;
+    font-family: "Futura500";
+    flex-shrink: 0;
   }
   &__icon {
     position: relative;
     top: 3rem;
   }
 
-  @media screen and (max-width: 375px) {
-    &__container {
-      max-width: 95%;
-      height: 100%;
-      margin: 0 auto;
-  
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    &__main-content {
-      max-width: 90%;
-    }
+  @media screen and (max-width: 700px) {
     &__title {
       font-size: 32px;
       letter-spacing: 1.7px;
-      margin-bottom: 1.5rem;
-      font-family: "Bodoni72";
+      width: 80%;
     }
 
-    &__bottom-content {
+    &__link-video,
+    &__icon {
       display: none;
     }
   }

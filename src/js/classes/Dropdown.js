@@ -1,4 +1,5 @@
 export default class Dropdown {
+
   constructor(wrapperElement, trigger, close) {
     this.selectors = {
       trigger,
@@ -9,8 +10,9 @@ export default class Dropdown {
 
     let triggerElement = wrapperElement.querySelector(this.SELECTORS.trigger);
     triggerElement.addEventListener("click", (e) => {
-      e.target.parentNode.classList.toggle(this.modifiers.close);
+      e.target.parentNode.classList.toggle(this.MODIFIERS.close);
     });
+
   }
 
   // passandoli come prop servono i get?
@@ -21,7 +23,4 @@ export default class Dropdown {
     return this.modifiers;
   }
 
-  // toggleSibbling(e) {
-  //   e.target.parentNode.classList.toggle(this.modifiers.close);
-  // }
 }

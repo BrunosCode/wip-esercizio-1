@@ -7,12 +7,17 @@ export default class Dropdown {
     this.modifiers = {
       close,
     };
+    this.open = this.open.bind(this);
 
     let triggerElement = wrapperElement.querySelector(this.SELECTORS.trigger);
-    triggerElement.addEventListener("click", (e) => {
-      e.target.parentNode.classList.toggle(this.MODIFIERS.close);
-    });
+    triggerElement.addEventListener("click", this.open);
+    // triggerElement.addEventListener("click", (e) => {
+    //   e.target.parentNode.classList.toggle(this.MODIFIERS.close);
+    // });
+  }
 
+  open(e) {
+    e.target.parentNode.classList.toggle(this.MODIFIERS.close);
   }
 
   // passandoli come prop servono i get?

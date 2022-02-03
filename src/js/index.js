@@ -1,11 +1,7 @@
 import '@scssFolder/';
+import Dropdown from './classes/Dropdown.js'
 
-const filters = document.getElementById("filters");
-const openFilters = document.getElementById("open-filters");
-
-openFilters.addEventListener("click", () => {
-  // togle the dataset boolean value 
-  filters.dataset.open = !(filters.dataset.open === "true");
+const filters = document.querySelectorAll(".filters");
+filters.forEach(filter => {
+  return new Dropdown(filter, ".filters__bar", "filters--close");
 })
-
-console.log("js");

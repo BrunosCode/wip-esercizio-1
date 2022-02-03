@@ -18,17 +18,90 @@
       width: 100%;
       height: .25rem;
       background-color: $white;
-      box-shadow: 0 .5rem 1px rgba(0, 0, 0, .3);
+      box-shadow: 0 .25rem .3rem rgba(0, 0, 0, .3);
     }
   
+  }
+  &__icon {
+    vertical-align: bottom;
+    margin-left: .5rem;
   }
   &__open-btn {
     @include reset-btn;
     text-transform: uppercase;
     font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   
-  &[data-open="false"] &__dropdown {
-    display: none;
+  &__dropdown {
+    padding: 1rem;
+    display: flex;
+
+    &__cols {
+      flex-grow: 1;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    &__col {
+      padding: .5rem 2rem;
+      min-width: 120px;
+      flex-shrink: 0;
+      border-right: solid 2px $gold--0;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+    &__list {
+      list-style: none;
+      margin: 0;
+    }
+    &__title {
+      color: $gold--1;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__submit {
+      margin-left: auto;
+      align-self: flex-end;
+      padding: 1rem 1.5rem;
+      background: $gold--1;
+      font-family: "Futura700";
+      color: $white;
+      border: none;
+      text-transform: uppercase;
+    }
+
+    [data-open="false"] & {
+      display: none;
+    }
+  }
+  &[data-open="true"] {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+  }
+
+
+  @media screen and (max-width: 700px) {
+    &__dropdown {
+      display: block;
+      &__cols {
+        display: block;
+        overflow-y: scroll;
+        max-height: 80vh;
+      }
+      &__col {
+        border-right: none;
+      }
+      
+      &__submit {
+        display: block;
+      }
+    } 
   }
 }

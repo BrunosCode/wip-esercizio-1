@@ -1,6 +1,6 @@
-@import "scss/variables";
-@import "scss/fonts";
-@import "scss/mixins";
+@import "@scssFolder/variables";
+@import "@scssFolder/fonts";
+@import "@scssFolder/mixins";
 
 
 *,
@@ -29,6 +29,6 @@ body {
   margin-right: .25rem;
 }
 
-@import "scss/header";
-@import "scss/filters";
-@import "scss/cards";
+@import "@scssFolder/header";
+@import "@scssFolder/filters";
+@import "@scssFolder/cards";

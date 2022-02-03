@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/dist/main.css">
+    <script type="text/javascript" defer src="/dist/runtime.js"></script>
+    <script type="text/javascript" defer src="/dist/main.js"></script>
+
+    <title>Wip Esercizio 1</title>
+</head>
+
+<body>
+    <!-- Header with doble linear gradient -->
+    <header class="header">
+        <!-- Background in z-index: -1 -->
+        <picture class="header__bg-img">
+            <source media="(min-width: 375px)" srcset="./dist/fao-schwarz-2@2x.png">
+            <img src="./dist/fao-schwarz-2.png" alt="Fao Shawarz">
+        </picture>
+
+        <!-- container with 3 cols, the main one grows -->
+        <div class="header__container">
+
+            <a class="header__link-video" href="#">
+                <!-- play button made in css -->
+                <img class="play-icon" src="./dist/play-icon.svg" alt="play button">
+                <span>Fake link a video</span>
+            </a>
+
+            <div class="header__main-content">
+                <h3 class="header__upper-title">Sviluppami con fedeltà</h3>
+                <h1 class="header__title">Una header per un negozio importante che vende giocattoli meravigliosi.</h1>
+                <a class="header__cta">Sono un link</a>
+            </div>
+
+            <!-- icon in position relative -->
+            <img class="header__icon" src="./dist/mongolfiera-2.svg" alt="mongolfiera">
+        </div>
+    </header>
+
+    <!-- Products sections -->
+    <section class="container">
+
+        <div class="filters" id="filters" data-open="false">
+            <div class="filters__bar">
+                <p><span id="products-number">45</span> risultati</p>
+
+                <button class="filters__open-btn" id="open-filters">
+                    Filtri
+                    <img class="filters__icon" src="./dist/filter-icon.svg" alt="filter button">
+                </button>
+            </div>
+
+            <div class="filters__dropdown">
+                <div class="filters__dropdown__cols">
+                    <div class="filters__dropdown__col">
+                        <h4 class="filters__dropdown__title">Label 1</h4>
+                        <ul class="filters__dropdown__list">
+                            <li class="filters__dropdown__li">O - 2</li>
+                            <li class="filters__dropdown__li">3 - 4</li>
+                            <li class="filters__dropdown__li">5 - 7</li>
+                            <li class="filters__dropdown__li">8 - 12</li>
+                            <li class="filters__dropdown__li">12 - 14</li>
+                            <li class="filters__dropdown__li">14 -</li>
+                        </ul>
+                    </div>
+
+                    <div class="filters__dropdown__col">
+                        <h4 class="filters__dropdown__title">Label 2</h4>
+                        <ul class="filters__dropdown__list">
+
+                            <li class="filters__dropdown__li">Bunnies By The Bay</li>
+                            <li class="filters__dropdown__li">Daron Worldwide Trading Inc.</li>
+                            <li class="filters__dropdown__li">FAO Schwarz</li>
+                            <li class="filters__dropdown__li">Funko</li>
+                            <li class="filters__dropdown__li">Hansa Toys USA.</li>
+                            <li class="filters__dropdown__li">Jellycat Inc.</li>
+                            <li class="filters__dropdown__li">Just Play PonyCycle Inc.</li>
+                            <li class="filters__dropdown__li">Ryan’s World</li>
+                            <li class="filters__dropdown__li">Star Wars</li>
+                            <li class="filters__dropdown__li">Steiff</li>
+                            <li class="filters__dropdown__li">North America Inc.</li>
+                            <li class="filters__dropdown__li">Trolls</li>
+                            <li class="filters__dropdown__li">Wonder & Wise</li>
+                        </ul>
+                    </div>
+
+                    <div class="filters__dropdown__col">
+                        <h4 class="filters__dropdown__title">Label 3</h4>
+                        <ul class="filters__dropdown__list">
+                            <li class="filters__dropdown__li">Valore di test</li>
+                            <li class="filters__dropdown__li">Valore di test</li>
+                            <li class="filters__dropdown__li">Valore di test</li>
+                            <li class="filters__dropdown__li">Valore di test</li>
+                            <li class="filters__dropdown__li">Valore di test</li>
+                            <li class="filters__dropdown__li">Valore di test</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <button class="filters__dropdown__submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3 class="card__title">Titolo</h3>
+                <p class="card__descrition">Description</p>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Titolo</h3>
+                <p class="card__descrition">Description</p>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Titolo</h3>
+                <p class="card__descrition">Description</p>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Titolo</h3>
+                <p class="card__descrition">Description</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

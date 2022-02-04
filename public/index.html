@@ -178,25 +178,22 @@
         </div>
 
         <div class="cards">
-            <div class="card">
+            <div class="card" data-multiply="8">
                 <div class="card__head">
                     <img class="card__img" src="./dist/fox.png" alt="fox">
                     <small class="card__info">Personalizzabile</small>
                     <small class="card__tag">Novità</small>
-                    <small class="card__heart">Heart</small>
+                    <img class="card__heart" src="./dist/heart-stroke.svg" alt="star stroke">
                 </div>
                 <div class="card__body">
                     <p class="card__text">Brand</p>
                     <h3 class="card__title">Nome prodotto</h3>
-                    <p class="card__text">Valutazione prodotto
-                        <span class="card__stars" data-stars="3">
-                            <img src="./dist/star-fill.svg" alt="star fill"><!--  ì
-                            --><img src="./dist/star-fill.svg" alt="star fill"><!-- 
-                            --><img src="./dist/star-fill.svg" alt="star fill"><!-- 
-                            --><img src="./dist/star-stroke.svg" alt="star stroke"><!-- 
-                            --><img src="./dist/star-stroke.svg" alt="star stroke"> 
-                        </span>
-                    </p>
+
+                    <!-- Ci deve essere un modo migliore -->
+                    <div class="card__spacebetween">
+                        <span class="card__text">Valutazione dei clienti</span>
+                        <span class="card__stars" data-stars="3"></span>
+                    </div>
                     <p class="card__text">€ <span class="card__price">00</span>,00</p>
                 </div>
                 <div class="card__dropdown">

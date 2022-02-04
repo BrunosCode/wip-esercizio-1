@@ -1,12 +1,18 @@
 export default class Dropdown {
 
+  get SELECTORS() {
+    return {
+      trigger: ".filters__bar"
+    };
+  }
+  get MODIFIERS() {
+    return {
+      close: "filters--close"
+    };
+  }
+
   constructor(wrapperElement, trigger, close) {
-    this.selectors = {
-      trigger,
-    };
-    this.modifiers = {
-      close,
-    };
+
     // soluzione con il bind
     this.open = this.open.bind(this);
 
@@ -21,13 +27,4 @@ export default class Dropdown {
   open(e) {
     e.target.parentNode.classList.toggle(this.MODIFIERS.close);
   }
-
-  // passandoli come prop servono i get?
-  get SELECTORS() {
-    return this.selectors;
-  }
-  get MODIFIERS() {
-    return this.modifiers;
-  }
-
 }

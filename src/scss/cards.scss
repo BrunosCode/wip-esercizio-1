@@ -10,7 +10,7 @@
   // per mantenere giu la finestra sull'hover delle card
   margin: 2rem 0 10rem;
 
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1400px) {
     grid-template-columns: repeat(3, 1fr);
   }
   @media screen and (max-width: 1000px) {

@@ -9,7 +9,7 @@
 
   background: $gold--1;
   color: white;
-  
+
   text-transform: uppercase;
   font-family: "Futura700";
 
@@ -17,4 +17,22 @@
     cursor: pointer;
     transform: scale(.9);
   }
+}
+
+@mixin tag-gold {
+  padding: .25rem .5rem;
+  border-radius: 1rem;
+
+  background-color: $gold--1;
+  color: $white;
+  
+  font-size: .75rem;
+  font-family: "Futura700";
+  text-transform: uppercase;
+}
+
+@mixin title-gold {
+  color: $gold--1;
+  font-family: "Futura700";
+  text-transform: uppercase;
 }

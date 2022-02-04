@@ -1,43 +1,45 @@
 .filters {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  position: relative;
   &__bar {
     margin-top: 4rem;
     padding: 1rem 2rem;
+
     position: relative;
-  
-    color: black;
-  
+    z-index: 2;
     display: flex;
     justify-content: space-between;
-
-    text-transform: uppercase;
-    font-family: "Futura500";
+    background-color: $white;
 
     &:hover {
       cursor: pointer;
     }
-    
+
     &::after {
       content: "";
       position: absolute;
+      z-index: 2;
       left: 0;
       bottom: 0;
       display: block;
       width: 100%;
-      height: .25rem;
+      height: 1rem;
       background-color: $white;
-      box-shadow: 0 .25rem .3rem rgba(0, 0, 0, .3);
     }
-  
   }
   &__icon {
     vertical-align: bottom;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
-  
+
   &__dropdown {
     padding: 1rem;
     display: flex;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
     &__cols {
       flex-grow: 1;
@@ -47,7 +49,7 @@
     }
 
     &__col {
-      padding: .5rem 2rem;
+      padding: 0.5rem 2rem;
       min-width: 8.75rem;
       flex-shrink: 0;
       border-right: solid 1.5px $gold--0;
@@ -56,24 +58,23 @@
         border-right: none;
       }
     }
-
-    & &--close {
-      display: none;
-    }
   }
+
   &--close {
     box-shadow: none;
 
+    .filters__bar::after {
+      height: .25rem;
+      box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.3);
+    }
     .filters__dropdown {
       display: none;
     }
   }
 
   &__title {
-    color: $gold--1;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: .75rem;
+    @include title-gold;
+    margin-bottom: 0.75rem;
   }
   &__input {
     display: none;
@@ -92,11 +93,11 @@
 
   &__submit {
     @include btn-gold;
-    
+
+    display: block;
     align-self: flex-end;
     margin-left: auto;
   }
-
 
   @media screen and (max-width: 700px) {
     &__dropdown {
@@ -109,10 +110,10 @@
       &__col {
         border-right: none;
       }
-      
+
       &__submit {
         display: block;
       }
-    } 
+    }
   }
 }

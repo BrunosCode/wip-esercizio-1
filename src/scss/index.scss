@@ -2,7 +2,6 @@
 @import "@scssFolder/fonts";
 @import "@scssFolder/mixins";
 
-
 *,
 *::before, 
 *::after {
@@ -14,6 +13,7 @@
 body {
   font-family: "Futura500";
   color: black;
+  font-size: 15px;
 }
 
 
@@ -22,11 +22,29 @@ body {
   margin: 0 auto;
 }
 
+// Icons
 .play-icon {
   stroke: $white;
   stroke-width: 2px;
   height: 1rem;
   margin-right: .25rem;
+}
+
+.star--fill,
+.star--stroke {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+  background-color: $gold--1;
+}
+.star--fill {
+  mask: url("../images/star-fill.svg");
+  mask-size: cover;
+}
+.star--stroke {
+  mask: url("../images/star-stroke.svg");
+  mask-size: cover;
 }
 
 @import "@scssFolder/header";

@@ -48,40 +48,15 @@
 
     &__col {
       padding: .5rem 2rem;
-      min-width: 120px;
+      min-width: 8.75rem;
       flex-shrink: 0;
-      border-right: solid 2px $gold--0;
+      border-right: solid 1.5px $gold--0;
 
       &:last-of-type {
         border-right: none;
       }
     }
-    &__list {
-      list-style: none;
-      margin: 0;
-    }
-    &__title {
-      color: $gold--1;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    &__link--accent {
-      color: $gold--1;
-      font-weight: 700;
-    }
 
-    &__submit {
-      margin-left: auto;
-      align-self: flex-end;
-      padding: 1rem 1.5rem;
-      background: $gold--1;
-      font-family: "Futura700";
-      color: $white;
-      border: none;
-      text-transform: uppercase;
-    }
-
-    
     & &--close {
       display: none;
     }
@@ -92,6 +67,34 @@
     .filters__dropdown {
       display: none;
     }
+  }
+
+  &__title {
+    color: $gold--1;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+  }
+  &__input {
+    display: none;
+
+    &:checked + label {
+      color: $gold--1;
+      font-weight: 700;
+    }
+  }
+  &__label {
+    display: block;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__submit {
+    @include btn-gold;
+    
+    align-self: flex-end;
+    margin-left: auto;
   }
 
 

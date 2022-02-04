@@ -2,3 +2,19 @@
   background: none;
   border: none;
 }
+
+@mixin btn-gold {
+  padding: 1rem 1.5rem;
+  border: none;
+
+  background: $gold--1;
+  color: white;
+  
+  text-transform: uppercase;
+  font-family: "Futura700";
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(.9);
+  }
+}

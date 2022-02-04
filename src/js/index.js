@@ -12,3 +12,13 @@ for (let i = 0; i < 7; i++) {
   let clone = card.cloneNode(true);
   container.appendChild(clone);
 }
+
+const labels = document.querySelectorAll(".filters__label");
+const inputs = document.querySelectorAll(".filters__input");
+
+labels.forEach((label, i) => {
+  label.setAttribute("for", i);
+})
+inputs.forEach((input, i) => {
+  input.id = i;
+})

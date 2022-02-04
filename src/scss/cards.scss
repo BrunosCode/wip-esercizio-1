@@ -1,9 +1,66 @@
-.cards-grid {
+.cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: stretch;
   row-gap: 2rem;
-  column-gap: 2rem;
+  column-gap: 1rem;
 
   margin-top: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  box-shadow: 0 0 1px $gray--1;
+  padding: 1rem;
+  &__head {
+    position: relative;
+    height: 14rem;
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  &__info {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+
+    color: $gold--1;
+  }
+  &__tag {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+
+    background-color: $gold--1;
+    color: white;
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+  }
+  &__heart {
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
+
+    color: $gold--0;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+  &__text {
+    font-size: .875rem;
+  }
 }

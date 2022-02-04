@@ -65,6 +65,10 @@
       font-weight: 700;
       text-transform: uppercase;
     }
+    &__link--accent {
+      color: $gold--1;
+      font-weight: 700;
+    }
 
     &__submit {
       margin-left: auto;

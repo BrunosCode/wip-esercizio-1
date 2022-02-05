@@ -27,6 +27,14 @@
       background-color: $white;
     }
   }
+  &__openBtn {
+    @include reset-btn;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &__icon {
     vertical-align: bottom;
     margin-left: 0.5rem;
@@ -99,7 +107,7 @@
     margin-left: auto;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 750px) {
     &__dropdown {
       display: block;
       &__cols {

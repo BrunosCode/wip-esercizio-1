@@ -41,28 +41,32 @@
 
   &__info {
     position: absolute;
-    top: .5rem;
-    left: .5rem;
+    top: 1rem;
+    left: 0.75rem;
 
     color: $gold--1;
-    padding: .25rem .5rem;
   }
   &__tag {
     @include tag-gold;
 
     position: absolute;
-    top: .5rem;
-    right: .5rem;
+    top: 1rem;
+    right: 0.5rem;
   }
   &__heart {
+    @include reset-btn;
+    @include heart;
+
     position: absolute;
     right: 1rem;
-    bottom: .5rem;
+    bottom: 0.5rem;
 
     height: 1.5rem;
+    width: 1.5rem;
+
     &:hover {
       cursor: pointer;
-      transform: scale(.9);
+      transform: scale(0.9);
     }
   }
 
@@ -71,7 +75,7 @@
     letter-spacing: 1px;
   }
   &__text {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 
   &__spacebetween {
@@ -79,6 +83,14 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+  }
+
+  &__star {
+    @include star;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
   }
 
   &__price {
@@ -97,13 +109,13 @@
   // spazi bianchi nel contorno delle card
   &::after {
     content: "";
-    
+
     position: absolute;
     top: 10%;
-    right: -.25rem;
-    
+    right: -0.25rem;
+
     display: block;
-    width: .5rem;
+    width: 0.5rem;
     height: 50%;
 
     background: $white;
@@ -112,12 +124,12 @@
     content: "";
 
     position: absolute;
-    top: -.25rem;
+    top: -0.25rem;
     right: 10%;
-    
+
     display: block;
     width: 70%;
-    height: .5rem;
+    height: 0.5rem;
 
     background: $white;
   }
@@ -126,8 +138,8 @@
     display: none;
   }
   &:hover {
-    box-shadow: 0 .25rem .5rem $gray--1;
-    
+    box-shadow: 0 0.25rem 0.5rem $gray--1;
+
     & .card__dropdown {
       display: block;
 
@@ -138,7 +150,7 @@
       padding: 0 1rem 1rem;
 
       background-color: white;
-      box-shadow: 0 .5rem .5rem $gray--1;
+      box-shadow: 0 0.5rem 0.5rem $gray--1;
     }
 
     &::after,

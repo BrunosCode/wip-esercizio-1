@@ -1,10 +1,11 @@
 import '@scssFolder/';
 import Dropdown from './classes/Dropdown.js'
 import Stars from './classes/Stars.js'
+import Like from './classes/Like.js'
 import multiplier from './functions/multiplier.js'
 
 // Add filter dropdown
-const filters = document.querySelectorAll(".filters");
+const filters = document.querySelectorAll("[data-component='filters']");
 filters.forEach(filter => {
   return new Dropdown(filter);
 })
@@ -17,6 +18,12 @@ multiplier();
 const starContainers = document.querySelectorAll("[data-stars]");
 starContainers.forEach(container => {
   return new Stars(container);
+})
+
+// Add Stars 
+const hearts = document.querySelectorAll("[data-component='like']");
+hearts.forEach(heart => {
+  return new Like(heart);
 })
 
 // Non avevo voglia di assegnare a tutte le label e gli input un id

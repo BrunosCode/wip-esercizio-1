@@ -35,22 +35,6 @@ body {
   margin-right: .25rem;
 }
 
-.star--fill,
-.star--stroke {
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  vertical-align: middle;
-}
-.star--fill {
-  background-image: url("../images/star-fill.svg");
-  background-size: cover;
-}
-.star--stroke {
-  background-image: url("../images/star-stroke.svg");
-  background-size: cover;
-}
-
 @import "@scssFolder/header";
 @import "@scssFolder/filters";
 @import "@scssFolder/cards";

@@ -36,3 +36,28 @@
   font-family: "Futura700";
   text-transform: uppercase;
 }
+
+
+// ICONS
+@mixin bg-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin heart {
+  @include bg-icon;
+  background-image: url("../images/heart-stroke.svg");
+
+  &--fill {
+    @include bg-icon;
+    background-image: url("../images/heart-fill.svg");
+  }
+}
+@mixin star {
+  @include bg-icon;
+  background-image: url("../images/star-stroke.svg");
+
+  &--fill {
+    @include bg-icon;
+    background-image: url("../images/star-fill.svg");
+  }
+}

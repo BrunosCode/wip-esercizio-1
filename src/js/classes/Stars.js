@@ -1,22 +1,5 @@
 export default class Stars {
 
-  constructor(element) {
-    const maxStars = 5;
-    const container = element;
-    const starsFilledNumber = container.dataset.stars;
-    for (let i = 0; i < starsFilledNumber; i++) {
-      let starFilled = document.createElement("span");
-      starFilled.classList.add(this.MODIFIERS.starFill);
-      container.appendChild(starFilled);
-    }
-    for (let i = 0; i < maxStars - starsFilledNumber; i++) {
-      let starStroked = document.createElement("span");
-      starStroked.classList.add(this.MODIFIERS.starStroke);
-      container.appendChild(starStroked);
-    }
-  }
-
-  // passandoli come prop servono i get?
   get SELECTORS() {
     return {
       container: "[data-stars]"
@@ -24,9 +7,24 @@ export default class Stars {
   }
   get MODIFIERS() {
     return {
-      starFill: "star--fill",
-      starStroke: "star--stroke",
+      star: "card__star",
+      starFill: "card__star--fill"
     };
   }
 
+  constructor(wrapperElement) {
+    const maxStars = 5;
+    const container = wrapperElement;
+    const starsFilledNumber = container.dataset.stars;
+    for (let i = 0; i < starsFilledNumber; i++) {
+      let starFilled = document.createElement("span");
+      starFilled.classList.add(this.MODIFIERS.star, this.MODIFIERS.starFill);
+      container.appendChild(starFilled);
+    }
+    for (let i = 0; i < maxStars - starsFilledNumber; i++) {
+      let star = document.createElement("span");
+      star.classList.add(this.MODIFIERS.star);
+      container.appendChild(star);
+    }
+  }
 }
